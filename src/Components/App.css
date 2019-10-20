@@ -1,0 +1,60 @@
+
+.App,.Login,.DashBoard,.Question,.QuestionPage,.Leader,.NewQuestion {
+  text-align: center;
+}
+.panel{
+  background: lightblue;
+  border: #09d3ac;
+  margin:10px;
+  padding-bottom: 10px;
+}
+.Votes{
+  background-color: red;
+  color: white;
+  font-size: xx-large;
+
+}
+.ptn{
+  width: 250px;
+  text-align: center;
+}
+.progress{
+    width: 200px;
+    margin-left: 460px;
+}
+.list{
+  border: 5px solid #1e9665!important;
+}
+#h5space{
+  padding: 10px;
+}
+#dropdown-basic-button{
+  width: 20%;
+}
+.SignIn{
+  width: 20%;
+}
+.dropdown-menu{
+  width: 20%;
+}
+.App-logo {
+  height: 40vmin;
+}
+img{
+  height: 30%;
+  width: 14%;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
