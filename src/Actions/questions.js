@@ -12,7 +12,8 @@ export function receiveQuestions(questions) {
     }
 }
 function addquestion(question) {
-    console.log('heys', question)
+    
+
     return {
         type: ADD_QUESTION,
         question
@@ -36,14 +37,14 @@ export function handleAddQuestion(Q1text, Q2text) {
     }
 }
 function addAnswer(answer) {
-    console.log('hey', answer)
+    
     return {
         type: ADD_ANSWER,
         answer
     }
 }
 export function handleAddAnswer(answer, id) {
-    console.log('Action', answer)
+    
     return (dispatch, getState) => {
         const { authedUser } = getState()
 
