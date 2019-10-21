@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Logo from './React-icon.svg'
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom'
+
 
 
 
@@ -31,19 +31,20 @@ class Login extends Component {
         this.setState(()=>({
             toHome: true
         }))
-        
+        const { dispatch } = this.props
+        dispatch(handdleSetAuthedUser(this.state.user))
        
         
         
     }
     render() {
         
-        if (this.state.toHome === true) {
-            const { dispatch } = this.props
-            dispatch(handdleSetAuthedUser(this.state.user))
-            return <Redirect to="/"/>
+        // if (this.state.toHome === true) {
+        //     const { dispatch } = this.props
+        //     dispatch(handdleSetAuthedUser(this.state.user))
+        //     return <Redirect to="/"/>
             
-        }
+        // }
         return (
             
             <div className="Login">

@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import QuestionUN from './QuestionUN'
 import QuestionAnswer from './QuestionAnswer'
+import {Redirect} from 'react-router-dom'
 
 class QuestionPage extends Component {
     render() {
      
         const poll = this.props
-        
+        if(poll.id === 'error'){
+            return <Redirect to="/Error"/>
+        }
         return (
             <div className="QuestionPage">
                  <img
@@ -27,7 +30,13 @@ class QuestionPage extends Component {
 }
 function mapStateToProps({ authedUser, questions, users }, props) {
     const { id } = props.match.params
-   
+    if(questions[id] === undefined)
+   {
+       return{
+           id:'error'
+       }
+   }
+   else{
         const OptionOne = questions[id].optionOne
         const OptionTwo = questions[id].optionTwo
         // 
@@ -47,6 +56,6 @@ function mapStateToProps({ authedUser, questions, users }, props) {
             authedUser
 
         }
-    
+    }
 }
 export default connect(mapStateToProps)(QuestionPage)

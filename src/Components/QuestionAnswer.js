@@ -9,7 +9,7 @@ class QuestionAnswer extends Component {
         const q1Votes = poll.optionOne.length
         const q2Votes = poll.optionTwo.length
         const combine = q1Votes + q2Votes
-        console.log(poll)
+        
         return (
             <div className="QuestionAnswer">
 

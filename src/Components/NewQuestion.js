@@ -49,9 +49,9 @@ class NewQuestion extends Component {
                <form className="new-question" onSubmit={this.handleSubmit}>
                    <p>Complete the question:</p>
                    <h5>would you rather</h5>
-                <input class="ptn" placeholder="Enter Option One Text Here" value={Q1text} onChange={this.handleChangeQ1}></input>
+                <input className="ptn" placeholder="Enter Option One Text Here" value={Q1text} onChange={this.handleChangeQ1}></input>
                 <p>-----OR----</p>
-                <input class="ptn" placeholder="Enter Option Two Text Here" value={Q2text} onChange={this.handleChangeQ2}></input>
+                <input className="ptn" placeholder="Enter Option Two Text Here" value={Q2text} onChange={this.handleChangeQ2}></input>
                 <p></p>
                 <Button  type="submit" variant="outline-success" disabled={Q1text ==='' || Q2text ===''} >submit</Button>
                </form>

@@ -10,7 +10,8 @@ import Nav from './nav'
 import NewQuestion from './NewQuestion';
 import QuestionPage from './QuestionPoll'
 import Leader from './Leader'
-
+import Error from './Error'
+import {Switch} from 'react-router-dom'
 
 
 class App extends Component {
@@ -26,12 +27,16 @@ class App extends Component {
           <Nav />
           {this.props.loading === true
             ? <Login/>
-            // : <QuestionPage match={{params: {id:'vthrdm985a262al8qx3do'}}} />
+            
             : <div>
+              <Switch>
               <Route path="/" exact component={DashBoard}/>
               <Route path="/question/:id" exact component={QuestionPage}/>
               <Route path="/new" exact component={NewQuestion}/>
               <Route path="/Leaders" exact component={Leader}/>
+              <Route path="/Error" exact component={Error}/>
+           
+              </Switch>
             </div>
           }
 
